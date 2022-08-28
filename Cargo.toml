@@ -1,0 +1,33 @@
+[package]
+name = "voronoi"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[features]
+default = ["console_error_panic_hook"]
+
+[dependencies]
+cgmath = "0.18.0"
+console_error_panic_hook = { version = "0.1.6", optional = true }
+js-sys = "0.3.59"
+serde = { version = "*", features = ["derive"] }
+serde_json = { version = "*" }
+
+[dependencies.wasm-bindgen]
+version = "0.2.82"
+features = ["serde-serialize"]
+
+[dependencies.web-sys]
+version = "0.3.4"
+features = [
+    'ImageData',
+    'CanvasRenderingContext2d',
+    'Document',
+    'Element',
+    'HtmlCanvasElement',
+    'Window',
+]

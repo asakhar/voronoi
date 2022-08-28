@@ -1,0 +1,9 @@
+{
+    "name": "index",
+    "version": "0.1.0",
+    "files": [
+        "index.js"
+    ],
+    "module": "index.js",
+    "sideEffects": false
+}
